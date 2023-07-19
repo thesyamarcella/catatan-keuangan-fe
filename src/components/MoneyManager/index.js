@@ -8,11 +8,11 @@ import "./index.css";
 const transactionTypeOptions = [
   {
     optionId: "pemasukan",
-    displayText: "Pemasukan",
+    displayText: "pemasukan",
   },
   {
     optionId: "pengeluaran",
-    displayText: "Pengeluaran",
+    displayText: "pengeluaran",
   },
 ];
 
@@ -184,6 +184,7 @@ class MoneyManager extends Component {
 
     this.addTransaction(newTransaction);
   };
+  
 
   render() {
     const { titleInput, amountInput, optionId, transactionsList } = this.state;
@@ -240,8 +241,8 @@ class MoneyManager extends Component {
                 value={optionId}
                 onChange={this.onChangeOptionId}
               >
-                <option value="INCOME">Pemasukan</option>
-                <option value="EXPENSES">Pengeluaran</option>
+                <option value="pemasukan">Pemasukan</option>
+                <option value="pengeluaran">Pengeluaran</option>
               </select>
 
               <button type="submit" className="button">

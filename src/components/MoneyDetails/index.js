@@ -4,8 +4,7 @@ import "./index.css";
 
 const API_BASE_URL = "http://127.0.0.1:8000/api";
 
-const MoneyDetails = (props) => {
-  const { balanceAmount, incomeAmount, expensesAmount } = props;
+const MoneyDetails = () => {
   const [totalSaldo, setTotalSaldo] = useState(0);
   const [totalPemasukan, setTotalPemasukan] = useState(0);
   const [totalPengeluaran, setTotalPengeluaran] = useState(0);
@@ -38,7 +37,7 @@ const MoneyDetails = (props) => {
         <div>
           <p className="details-text">Saldo Anda</p>
           <p className="details-money" testid="balanceAmount">
-            Rp {balanceAmount}
+            Rp {totalSaldo}
           </p>
         </div>
       </div>
@@ -51,7 +50,7 @@ const MoneyDetails = (props) => {
         <div>
           <p className="details-text">Pemasukkan Anda</p>
           <p className="details-money" testid="incomeAmount">
-            Rp {incomeAmount}
+            Rp {totalPemasukan}
           </p>
         </div>
       </div>
@@ -64,12 +63,12 @@ const MoneyDetails = (props) => {
         <div>
           <p className="details-text">Pengeluaran Anda</p>
           <p className="details-money" testid="expensesAmount">
-            Rp {expensesAmount}
+            Rp {totalPengeluaran}
           </p>
         </div>
       </div>
     </div>
-  )
+  );
 };
 
 export default MoneyDetails;
